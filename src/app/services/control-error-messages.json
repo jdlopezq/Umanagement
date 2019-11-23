@@ -1,0 +1,7 @@
+{
+  "errorMessages": {
+    "required":"Please fulfill this field.",
+    "validateEqual":"Passwords doesn't match",
+    "pattern":"Password pattern is wrong"
+  }
+}

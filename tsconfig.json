@@ -10,6 +10,9 @@
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
     "target": "es2015",
     "typeRoots": [
       "node_modules/@types"

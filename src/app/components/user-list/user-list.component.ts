@@ -11,18 +11,26 @@ import { userData } from 'src/app/shared/user.interface';
 })
 export class UserListComponent implements OnInit {
   private dataSource = new MatTableDataSource<userData>()
-  private displayedColumns
-
+  private displayedColumns: Array<string> = []
+  private dataReady=true
+private registUserButtonInfo='Regist a new user'
   constructor(private _userDataService: UserDataService,
     private _router: Router) { }
 
   ngOnInit() {
     this._userDataService.getUsers().subscribe((data: any) => {
       console.log(data);
-      this.displayedColumns
+      this.displayedColumns = Object.keys(data[0])
+      this.displayedColumns.push('Options')
       this.dataSource.data = data
+      this.dataReady=false
     })
 
   }
+
+
+registUser(){
+this._router.navigate(['user-register'])
+}
 
 }

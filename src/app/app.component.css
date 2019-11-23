@@ -1,0 +1,10 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(../assets/Footer-Mountains.png) no-repeat top;
+    background-size: cover;
+    z-index: -10;
+    height: 12%;
+  }

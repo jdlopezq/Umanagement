@@ -17,4 +17,10 @@ getUsers(){
   }))
 }
 
+registUser(user){
+  return this._htttp.post(`${this.apiUrl}`,user).pipe(map((response:Response)=>{
+return response
+  }))
+}
+
 }
