@@ -3,10 +3,10 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-.footer-top-image {
-    width: 100%;
-    margin-top: 80px;
-    position: relative;
-    background: url(../src/assets/Footer-Mountains.png) no-repeat top;
-    background-size: cover;
+.mat-tooltip{
+  font-size: 12px;
+  height:fit-content !important;
+  color: white !important;
+  border-radius: 30px;
+  white-space: pre-line !important;
 }

@@ -8,7 +8,7 @@
 
   mat-card{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 400px;
@@ -21,4 +21,16 @@
 
   mat-form-field{
     width: 100%;
+  }
+
+  mat-card-actions{
+    text-align: center;
+  }
+  .submitButton{
+background-color: #4bc970;
+color: white;
+  }
+  .resetButton{
+    background-color: #ff635d;
+    color: white;
   }

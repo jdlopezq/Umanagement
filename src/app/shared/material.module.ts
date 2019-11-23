@@ -29,7 +29,8 @@ import {
     MatDatepickerModule,
     MatNativeDateModule, 
     MatTooltipModule,
-    MatSortModule
+    MatSortModule,
+    MatRippleModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule, } from '@angular/forms'
 import { MatMenuModule } from '@angular/material/menu';
@@ -66,7 +67,7 @@ import { MatMenuModule } from '@angular/material/menu';
         MatTooltipModule, 
         MatSortModule,
         MatCheckboxModule,
-        
+        MatRippleModule,
     ],
     exports: [MatButtonModule,
         MatButtonToggleModule,
@@ -99,7 +100,8 @@ import { MatMenuModule } from '@angular/material/menu';
         MatDatepickerModule,
         MatNativeDateModule,
         MatChipsModule,
-        MatTooltipModule
+        MatTooltipModule,
+        MatRippleModule
     ],
     providers: [],
 })
