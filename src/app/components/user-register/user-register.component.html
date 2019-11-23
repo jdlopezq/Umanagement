@@ -8,34 +8,41 @@
         </button>
     </mat-toolbar-row>
 </mat-toolbar>
-
+<div style="text-align: center;">
+    <h1>
+        {{procedure}}
+    </h1>
+</div>
 <mat-card>
-    <form (ngSubmit)="sendUser()" [formGroup]="registerForm">
+    <form (ngSubmit)="methodToUse()" [formGroup]="registerForm">
         <mat-card-header>
             <div mat-card-avatar class="header-image"></div>
             <mat-card-title>Insert user data here</mat-card-title>
             <mat-card-subtitle>Remember, passwords must be the same </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-            <mat-form-field  >
+            <mat-form-field>
                 <input matInput placeholder="ID" formControlName="ID" type="number">
                 <mat-error>{{formMessages.errorMessage(registerForm.controls.ID, '')}}</mat-error>
             </mat-form-field>
-            <mat-form-field >
-                <input matInput placeholder="Username" formControlName="UserName" >
+            <mat-form-field>
+                <input matInput placeholder="Username" formControlName="UserName">
                 <mat-error>{{formMessages.errorMessage(registerForm.controls.UserName, '')}}</mat-error>
             </mat-form-field>
-            <mat-form-field >
-                <input matInput placeholder="User password" formControlName="Password" type="password" [matTooltip]="passInfo" matTooltipPosition="right">
+            <mat-form-field>
+                <input matInput placeholder="User password" formControlName="Password" type="password"
+                    [matTooltip]="passInfo" matTooltipPosition="right">
                 <mat-error>{{formMessages.errorMessage(registerForm.controls.Password, '', 'password')}}</mat-error>
             </mat-form-field>
-            <mat-form-field >
-                <input matInput placeholder="Confirm user password" formControlName="confirmPassword" type="password" matTooltipPosition="right">
-                <mat-error>{{formMessages.errorMessage(registerForm.controls.confirmPassword, '', 'password')}}</mat-error>
+            <mat-form-field>
+                <input matInput placeholder="Confirm user password" formControlName="confirmPassword" type="password"
+                    matTooltipPosition="right">
+                <mat-error>{{formMessages.errorMessage(registerForm.controls.confirmPassword, '', 'password')}}
+                </mat-error>
             </mat-form-field>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button type="submit" class="submitButton" [disabled]="!registerForm.valid">Regist User</button>
+            <button mat-raised-button type="submit" class="submitButton" [disabled]="!registerForm.valid">Confirm</button>
             <button mat-raised-button type="button" class="resetButton" (click)='resetForm()'> Reset Form</button>
         </mat-card-actions>
     </form>

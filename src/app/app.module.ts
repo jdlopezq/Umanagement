@@ -9,13 +9,15 @@ import { UserRegisterComponent } from './components/user-register/user-register.
 import { UserEditionComponent } from './components/user-edition/user-edition.component';
 import { MaterialModule } from './shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserRegisterComponent,
-    UserEditionComponent
+    UserEditionComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[UserEditionComponent,ConfirmDialogComponent]
 })
 export class AppModule { }

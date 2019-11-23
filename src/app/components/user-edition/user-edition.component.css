@@ -1,0 +1,12 @@
+button{
+    height: 50%;
+    width: 50%;
+    color: white;
+}
+.deleteBtn{
+background-color: tomato;
+}
+
+.editBtn{
+    background-color: #0079b8;
+}

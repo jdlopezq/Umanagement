@@ -22,5 +22,16 @@ registUser(user){
 return response
   }))
 }
+deleteUser(id){
+ return this._htttp.delete(`${this.apiUrl}/${id}`).pipe(map((response:Response)=>{
+  return response
+}))
+}
+
+editUser(id, data){
+  return this._htttp.put(`${this.apiUrl}/${id}`, data).pipe(map((response:Response)=>{
+    return response
+  }))
+}
 
 }

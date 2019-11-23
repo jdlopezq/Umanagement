@@ -10,3 +10,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border-radius: 30px;
   white-space: pre-line !important;
 }
+
+.mat-bottom-sheet-container{
+    background-color: #000000bf;
+}

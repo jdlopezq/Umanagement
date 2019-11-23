@@ -16,7 +16,6 @@ import {
     MatButtonToggleModule,
     MatInputModule,
     MatSlideToggleModule,
-    MatSnackBarModule,
     MatProgressBarModule,
     MatCardModule,
     MatStepperModule,
@@ -30,9 +29,11 @@ import {
     MatNativeDateModule, 
     MatTooltipModule,
     MatSortModule,
-    MatRippleModule
+    MatRippleModule,
+    MatBottomSheetModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule, } from '@angular/forms'
+import {MatSnackBarModule} from '@angular/material/snack-bar'
 import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
     imports: [MatButtonModule,
@@ -68,6 +69,7 @@ import { MatMenuModule } from '@angular/material/menu';
         MatSortModule,
         MatCheckboxModule,
         MatRippleModule,
+        MatBottomSheetModule,
     ],
     exports: [MatButtonModule,
         MatButtonToggleModule,
@@ -101,7 +103,8 @@ import { MatMenuModule } from '@angular/material/menu';
         MatNativeDateModule,
         MatChipsModule,
         MatTooltipModule,
-        MatRippleModule
+        MatRippleModule,
+        MatBottomSheetModule
     ],
     providers: [],
 })

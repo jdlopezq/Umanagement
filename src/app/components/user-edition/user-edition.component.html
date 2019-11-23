@@ -1,1 +1,22 @@
-<p>user-edition works!</p>
+<div style="color: white; text-align: center;">
+<h2>You selected: {{data.UserName}}</h2>
+<h3>What you want to do?</h3>
+</div>
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile colspan="2" rowspan="2">
+        <button mat-raised-button class="editBtn" (click)='editUser()'>
+            <div style="width: 100%">
+                <i class="material-icons ">edit</i>
+                <div style="position: relative;">Edit</div>
+            </div>
+        </button>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="2">
+        <button mat-raised-button class="deleteBtn" (click)="deleteUser()">
+            <div style="width: 100%">
+                <i class="material-icons">delete</i>
+                <div style="position: relative;">Delete</div>
+            </div>
+        </button>
+    </mat-grid-tile>
+</mat-grid-list>

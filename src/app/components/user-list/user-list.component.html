@@ -1,41 +1,35 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <span>User Management</span>
-        <span class="spacer"></span>
+  <mat-toolbar-row>
+    <span>User Management</span>
+    <span class="spacer"></span>
 
-        <button mat-raised-button (click)="registUser()" [matTooltip]="registUserButtonInfo" >
-            <mat-icon class="icon">person_add </mat-icon>
-          </button>
-    </mat-toolbar-row>
+    <button mat-raised-button (click)="registUser()" [matTooltip]="registUserButtonInfo">
+      <mat-icon class="icon">person_add </mat-icon>
+    </button>
+  </mat-toolbar-row>
 </mat-toolbar>
+<div style="text-align: center;"><h4>To access user options, please click the user</h4></div>
 <div class="loading" [hidden]=!dataReady>
-<mat-spinner style="margin:0 auto;" ></mat-spinner>
+  <mat-spinner style="margin:0 auto;"></mat-spinner>
 </div>
-<div class="container" [hidden]=dataReady >
-    <div class="mat-elevation-z8">
-      <mat-table #table [dataSource]="dataSource" matSort >
-  
-        <!-- Position Column -->
-        <ng-container [matColumnDef]="columns" *ngFor="let columns of displayedColumns, let i=index">
-           
-          <mat-header-cell (click)="logSort()" *matHeaderCellDef mat-sort-header> {{columns}} </mat-header-cell>
-          <mat-cell *matCellDef="let element">{{element[columns]}} </mat-cell>
-          <ng-container *ngIf="columns == 'Options'">
-            <mat-cell *matCellDef="let element">
-              <button mat-icon-button (click)="deleteItem(element.name)">
-                <i class="material-icons" style="color: #75001F">delete</i>
-              </button>
-            </mat-cell>
-          </ng-container>
-        </ng-container>
-       
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row (click)="highlight(row)" *matRowDef="let row; columns: displayedColumns"></mat-row>
-      </mat-table>
-      <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
-      </mat-paginator>
+<div class="container" [hidden]=dataReady>
+  <div class="mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource" matSort>
+
+      <!-- Position Column -->
+      <ng-container [matColumnDef]="columns" *ngFor="let columns of displayedColumns, let i=index">
+
+        <mat-header-cell (click)="logSort()" *matHeaderCellDef mat-sort-header> {{columns}} </mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element[columns]}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row (click)="highlight(row)" *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+    <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
+    </mat-paginator>
 
 
-      
-    </div>
+
   </div>
+</div>
